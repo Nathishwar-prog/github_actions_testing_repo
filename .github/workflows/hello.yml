@@ -3,6 +3,10 @@ name : "Hello World"
 on :
     push:
 
+env:
+    GREETING : "Hello"
+    TARGET : "World"
+    MESSAGE : "Welcome to the world of GitHub Actions"
 jobs :
     hello :
         runs-on : ubuntu-latest
@@ -10,3 +14,9 @@ jobs :
         steps : 
             - name : Say
               run : echo "Hello world"
+
+            - name : Say Hello
+              run : echo "${{ env.GREETING }} ${{ env.TARGET }}"
+
+            - name : Say Message
+              run : echo "${{ env.MESSAGE }}"
