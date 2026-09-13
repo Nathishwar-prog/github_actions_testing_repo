@@ -21,8 +21,12 @@ jobs :
             - name : Say Message
               run : echo "${{ env.MESSAGE }}"
 
-            - name : Say API Key
-              run : |
-                    echo "API Key : ${{ env.API_KEY }}"
-                    if : API_KEY is not empty , then echo "API KEY is Set" else echo "API KEY is not set"
-                    
+            - name: Say API Key
+              run: |
+                echo "API Key : $API_KEY"
+
+                if [ -n "$API_KEY" ]; then
+                echo "API KEY is Set"
+                else
+                echo "API KEY is not set"
+                fi
