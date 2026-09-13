@@ -1,0 +1,50 @@
+name : Getting the Info about the User
+
+on :
+    push :
+
+jobs :
+    show-project-info :
+        runs-on : ubuntu-latest
+
+        steps :
+            - name : Show Project Information
+              run : |
+                    echo "Project Name: ${{ github.event.repository.name }}"
+                    echo "Project Owner: ${{ github.event.repository.owner.login }}"
+                    echo "Project URL: ${{ github.event.repository.html_url }}"
+                    echo "Default Branch: ${{ github.event.repository.default_branch }}"
+                    echo "Branches Count: ${{ github.event.repository.branches_count }}"
+                    echo "Forks Count: ${{ github.event.repository.forks_count }}"
+                    echo "Open Issues Count: ${{ github.event.repository.open_issues_count }}"
+                    echo "Stars Count: ${{ github.event.repository.stars_count }}"
+                    echo "Watchers Count: ${{ github.event.repository.watchers_count }}"
+                    echo "Size: ${{ github.event.repository.size }}"
+                    echo "Language: ${{ github.event.repository.language }}"
+                    echo "Homepage: ${{ github.event.repository.homepage }}"
+                    echo "Created At: ${{ github.event.repository.created_at }}"
+                    echo "Updated At: ${{ github.event.repository.updated_at }}"
+                    echo "Pushed At: ${{ github.event.repository.pushed_at }}"
+                    echo "Last Commit: ${{ github.event.repository.last_commit }}"
+                    echo "Last Push: ${{ github.event.repository.last_push }}"
+                    echo "License: ${{ github.event.repository.license.name }}"
+                    echo "Visibility: ${{ github.event.repository.visibility }}"
+                    echo "Username: ${{ github.actor }}"
+                    echo "User ID: ${{ github.actor_id }}"
+                    echo "User Type: ${{ github.actor_type }}"
+                    echo "User URL: ${{ github.actor_url }}"
+                    echo "User Avatar URL: ${{ github.actor_avatar_url }}"
+                    echo "User Bio: ${{ github.actor_bio }}"
+                    echo "User Location: ${{ github.actor_location }}"
+                    echo "User Email: ${{ github.actor_email }}"
+                    echo "User Company: ${{ github.actor_company }}"
+                    echo "User Blog: ${{ github.actor_blog }}"
+                    echo "Branches: ${{ github.event.repository.branches }}"
+                    echo "Tags: ${{ github.event.repository.tags }}"
+                    echo "Releases: ${{ github.event.repository.releases }}"
+                    echo "Contributors: ${{ github.event.repository.contributors }}"
+                    echo "Collaborators: ${{ github.event.repository.collaborators }}"
+                    echo "Teams: ${{ github.event.repository.teams }}"
+                    echo "Milestones: ${{ github.event.repository.milestones }}"
+                    echo "Branches : ${{ github.ref_name }}"
+                    echo "Repository Description: ${{ github.event.repository.description }}"
