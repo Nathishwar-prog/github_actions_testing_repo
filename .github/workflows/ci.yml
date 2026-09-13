@@ -12,6 +12,9 @@ jobs:
   build:
     runs-on : ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install Dependencies
         run : npm install
 
@@ -23,5 +26,4 @@ jobs:
 
       - name: Step 2
         run : echo "This is a CI workflow"
-
 
