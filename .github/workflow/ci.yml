@@ -1,0 +1,27 @@
+name : CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Install Dependencies
+        run : npm install
+
+      - name: Build Project
+        run : npm run build
+        
+      - name: Step 1
+        run : echo "Hello World"
+
+      - name: Step 2
+        run : echo "This is a CI workflow"
+
+
