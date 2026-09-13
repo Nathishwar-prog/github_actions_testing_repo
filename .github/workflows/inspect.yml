@@ -1,0 +1,21 @@
+name: Inspect Project
+
+on:
+  push:
+
+jobs:
+  inspect-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Show files
+      - name: Show project files
+        run: ls -la
+
+      # 3. Show README
+      - name: Show README
+        run: cat README.md
