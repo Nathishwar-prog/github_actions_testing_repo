@@ -1,7 +1,7 @@
 name: Inspect Project
 
 on:
-  push:
+  push :
 
 jobs:
   inspect-project:

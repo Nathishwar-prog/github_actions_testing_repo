@@ -1,7 +1,7 @@
 name : "Hello World"
 
 on :
-    push:
+    pull_request:
 
 env:
     API_KEY : ${{ secrets.APP_NAME}}

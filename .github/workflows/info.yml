@@ -1,7 +1,7 @@
 name : Getting the Info about the User
 
 on :
-    push :
+    pull_request :
 
 jobs :
     show-project-info :
