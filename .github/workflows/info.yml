@@ -48,3 +48,78 @@ jobs :
                     echo "Milestones: ${{ github.event.repository.milestones }}"
                     echo "Branches : ${{ github.ref_name }}"
                     echo "Repository Description: ${{ github.event.repository.description }}"
+
+            - name : Show User Information
+              run : |
+                    echo "User Name: ${{ github.actor }}"
+                    echo "User ID: ${{ github.actor_id }}"
+                    echo "User Type: ${{ github.actor_type }}"
+                    echo "User URL: ${{ github.actor_url }}"
+                    echo "User Avatar URL: ${{ github.actor_avatar_url }}"
+                    echo "User Bio: ${{ github.actor_bio }}"
+                    echo "User Location: ${{ github.actor_location }}"
+                    echo "User Email: ${{ github.actor_email }}"
+                    echo "User Company: ${{ github.actor_company }}"
+                    echo "User Blog: ${{ github.actor_blog }}"
+
+            - name : Show Repository Information
+              run : |
+                    echo "Repository Name: ${{ github.event.repository.name }}"
+                    echo "Repository Owner: ${{ github.event.repository.owner.login }}"
+                    echo "Repository URL: ${{ github.event.repository.html_url }}"
+                    echo "Default Branch: ${{ github.event.repository.default_branch }}"
+                    echo "Branches Count: ${{ github.event.repository.branches_count }}"
+                    echo "Forks Count: ${{ github.event.repository.forks_count }}"
+                    echo "Open Issues Count: ${{ github.event.repository.open_issues_count }}"
+                    echo "Stars Count: ${{ github.event.repository.stars_count }}"
+                    echo "Watchers Count: ${{ github.event.repository.watchers_count }}"
+                    echo "Size: ${{ github.event.repository.size }}"
+                    echo "Language: ${{ github.event.repository.language }}"
+                    echo "Homepage: ${{ github.event.repository.homepage }}"
+                    echo "Created At: ${{ github.event.repository.created_at }}"
+                    echo "Updated At: ${{ github.event.repository.updated_at }}"
+                    echo "Pushed At: ${{ github.event.repository.pushed_at }}"
+                    echo "Last Commit: ${{ github.event.repository.last_commit }}"
+                    echo "Last Push: ${{ github.event.repository.last_push }}"
+                    echo "License: ${{ github.event.repository.license.name }}"
+                    echo "Visibility: ${{ github.event.repository.visibility }}"
+
+            - name : Show Workflow Information
+              run : |
+                    echo "Workflow Name: ${{ github.workflow }}"
+                    echo "Workflow Run ID: ${{ github.run_id }}"
+                    echo "Workflow Run Number: ${{ github.run_number }}"
+                    echo "Workflow Event Name: ${{ github.event_name }}"
+                    echo "Workflow SHA: ${{ github.sha }}"
+                    echo "Workflow Ref: ${{ github.ref }}"
+                    echo "Workflow Head Ref: ${{ github.head_ref }}"
+                    echo "Workflow Base Ref: ${{ github.base_ref }}"
+                    echo "Workflow Actor: ${{ github.actor }}"
+                    echo "Workflow Repository: ${{ github.repository }}"
+
+            - name : Show Runner Information
+              run : |
+                    echo "Runner OS: ${{ runner.os }}"
+                    echo "Runner Architecture: ${{ runner.arch }}"
+                    echo "Runner Name: ${{ runner.name }}"
+                    echo "Runner Temporary Directory: ${{ runner.temp }}"
+                    echo "Runner Workspace Directory: ${{ runner.workspace }}"
+
+            - name : Show Job Information
+              run : |
+                    echo "Job Name: ${{ job.name }}"
+                    echo "Job ID: ${{ job.id }}"
+                    echo "Job Status: ${{ job.status }}"
+                    echo "Job Conclusion: ${{ job.conclusion }}"
+                    echo "Job Started At: ${{ job.started_at }}"
+                    echo "Job Completed At: ${{ job.completed_at }}"
+
+
+            - name : show Commit Information
+              run : |
+                    echo "Commit SHA: ${{ github.sha }}"
+                    echo "Commit Message: ${{ github.event.head_commit.message }}"
+                    echo "Commit Author: ${{ github.event.head_commit.author.name }}"
+                    echo "Commit Author Email: ${{ github.event.head_commit.author.email }}"
+                    echo "Commit Timestamp: ${{ github.event.head_commit.timestamp }}"
+                    echo "Commit URL: ${{ github.event.head_commit.url }}"
